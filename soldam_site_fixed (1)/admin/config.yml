@@ -1,0 +1,51 @@
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - label: "Gallery"
+    name: "photos"
+    files:
+      - label: "Photos"
+        name: "gallery"
+        file: "data/photos.json"
+        format: "json"
+        fields:
+          - label: "Items"
+            name: "photos"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - {label: "ID", name: "id", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text", required: false}
+              - {label: "Image", name: "image", widget: "image"}
+              - label: "Tags"
+                name: "tags"
+                widget: "list"
+                required: false
+  - label: "Board"
+    name: "posts"
+    files:
+      - label: "Posts"
+        name: "board"
+        file: "data/posts.json"
+        format: "json"
+        fields:
+          - label: "Items"
+            name: "posts"
+            widget: "list"
+            fields:
+              - {label: "ID", name: "id", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Date", name: "date", widget: "datetime"}
+              - {label: "Content (Markdown)", name: "content", widget: "markdown"}
+              - label: "Attachments"
+                name: "attachments"
+                widget: "list"
+                required: false
+                field: {label: "File", name: "file", widget: "file"}

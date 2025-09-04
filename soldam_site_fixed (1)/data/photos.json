@@ -1,0 +1,95 @@
+{
+  "photos": [
+    {
+      "id": "sample-1",
+      "title": "Sample Image 1",
+      "description": "Included demo image.",
+      "image": "uploads/sample_1.webp",
+      "tags": [
+        "sample",
+        "portfolio"
+      ]
+    },
+    {
+      "id": "sample-2",
+      "title": "Sample Image 2",
+      "description": "Included demo image.",
+      "image": "uploads/sample_2.jpg",
+      "tags": [
+        "sample"
+      ]
+    },
+    {
+      "id": "sample-3",
+      "title": "Sample Image 3",
+      "description": "Included demo image.",
+      "image": "uploads/sample_3.jpg",
+      "tags": [
+        "sample"
+      ]
+    },
+    {
+      "id": "sample-4",
+      "title": "Sample Image 4",
+      "description": "Included demo image.",
+      "image": "uploads/sample_4.jpg",
+      "tags": [
+        "sample"
+      ]
+    },
+    {
+      "id": "sample-5",
+      "title": "Sample Image 5",
+      "description": "Included demo image.",
+      "image": "uploads/sample_5.jpg",
+      "tags": [
+        "sample"
+      ]
+    },
+    {
+      "id": "sample-6",
+      "title": "Sample Image 6",
+      "description": "Included demo image.",
+      "image": "uploads/sample_6.jpg",
+      "tags": [
+        "sample"
+      ]
+    },
+    {
+      "id": "sample-7",
+      "title": "Sample Image 7",
+      "description": "Included demo image.",
+      "image": "uploads/sample_7.png",
+      "tags": [
+        "sample"
+      ]
+    },
+    {
+      "id": "sample-8",
+      "title": "Sample Image 8",
+      "description": "Included demo image.",
+      "image": "uploads/sample_8.jpg",
+      "tags": [
+        "sample"
+      ]
+    },
+    {
+      "id": "sample-9",
+      "title": "Sample Image 9",
+      "description": "Included demo image.",
+      "image": "uploads/sample_9.jpg",
+      "tags": [
+        "sample"
+      ]
+    },
+    {
+      "id": "sample-10",
+      "title": "Sample Image 10",
+      "description": "Included demo image.",
+      "image": "uploads/sample_10.jpg",
+      "tags": [
+        "sample"
+      ]
+    }
+  ]
+}

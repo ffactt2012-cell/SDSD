@@ -1,0 +1,74 @@
+
+:root{
+  --bg:#0b0e14;
+  --card:#111624;
+  --elev:#0f1422;
+  --line:#1d2840;
+  --text:#eaf1ff;
+  --muted:#9fb0cb;
+  --accent:#7cc6ff;
+  --accent2:#70f;
+  --gold:#d8b56a;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:linear-gradient(180deg, #0a0d14 0%, #0b1020 100%);color:var(--text);
+font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial}
+a{color:var(--accent);text-decoration:none}
+a:hover{opacity:.9}
+/* Top bar */
+header{position:sticky;top:0;z-index:50;background:rgba(11,14,20,.6);backdrop-filter:blur(10px);border-bottom:1px solid #162038}
+.nav{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 18px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
+.brand .dot{width:10px;height:10px;border-radius:50%;background:radial-gradient(circle at 30% 30%, #9df, #57a2ff)}
+.navlinks{display:flex;gap:14px}
+.navlinks a{color:var(--text);font-weight:600;opacity:.92;padding:8px 10px;border-radius:10px}
+.navlinks a:hover{background:#151c2d}
+/* Layout */
+.container{max-width:1200px;margin:0 auto;padding:28px 18px}
+.hero{display:grid;gap:8px;margin:8px 0 18px}
+.hero .kicker{color:var(--gold);font-size:12px;letter-spacing:.18em;text-transform:uppercase}
+.hero .title{font-size:32px;font-weight:900;background:linear-gradient(90deg,#fff,#9ec7ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .desc{color:var(--muted);max-width:70ch}
+/* Gallery grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
+.card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.25);transition:transform .25s ease, box-shadow .25s ease, border-color .25s}
+.card:hover{transform:translateY(-4px);border-color:#2d3d64;box-shadow:0 16px 40px rgba(0,0,0,.35)}
+.thumb{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#000}
+.meta{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;color:var(--muted);font-size:14px}
+.badge{font-size:12px;color:#091020;background:linear-gradient(135deg,#e7f3ff,#bcd8ff);border-radius:999px;padding:5px 10px;border:1px solid #9ac2ff}
+/* Viewer */
+.viewer{display:grid;grid-template-columns:1fr;gap:18px}
+.image-wrap{position:relative;background:#000;border-radius:18px;overflow:hidden;border:1px solid #243356}
+.viewer img{width:100%;height:100%;max-height:72vh;object-fit:contain;display:block;background:#000}
+.navbtn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.55);border:1px solid #3c4a6d;color:#fff;padding:10px 12px;border-radius:12px;cursor:pointer}
+.navbtn:hover{background:rgba(0,0,0,.75)}
+.prev{left:10px}.next{right:10px}
+.caption{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:12px;border:1px solid #2b3d63;border-radius:999px;color:var(--muted);padding:4px 10px}
+/* Comments */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px}
+.comment{border-top:1px dashed #2a3554;padding:12px 0}
+.comment:first-child{border-top:0}
+.comment .author{font-weight:800}
+.comment .date{color:var(--muted);font-size:12px}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+input,textarea{width:100%;background:#0e1421;color:var(--text);border:1px solid #293657;border-radius:12px;padding:10px}
+textarea{min-height:110px;resize:vertical}
+.btn{display:inline-flex;align-items:center;gap:8px;background:#17223a;border:1px solid #31446e;color:var(--text);
+border-radius:12px;padding:10px 14px;font-weight:700;cursor:pointer}
+.btn:hover{border-color:#4d6fb3}
+/* Board */
+.list{display:grid;gap:12px}
+.post-item{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+.post-item .title{font-weight:800}
+.post-item .date{color:var(--muted);font-size:12px}
+.post{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px}
+.post h1,.post h2,.post h3{margin-top:1.2em}
+.post img{max-width:100%;border-radius:12px}
+/* Footer */
+.footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;margin-top:32px;padding:24px 18px}
+/* Responsiveness */
+@media (min-width: 960px){
+  .viewer{grid-template-columns:minmax(0,1.38fr) minmax(0,.62fr)}
+}

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Photo</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+  
+<header>
+  <nav class="nav">
+    <div class="brand"><span class="dot"></span> SOLDAM Design Lab</div>
+    <div class="navlinks">
+      <a href="index.html">Gallery</a>
+      <a href="board.html">Board</a>
+      <a href="/admin" title="Admin only">Admin</a>
+    </div>
+  </nav>
+</header>
+
+  <div class="container viewer">
+    <div class="image-wrap">
+      <button id="prevBtn" class="navbtn prev" aria-label="Previous">◀</button>
+      <img id="viewerImage" alt=""/>
+      <button id="nextBtn" class="navbtn next" aria-label="Next">▶</button>
+    </div>
+    <div>
+      <div class="caption">
+        <div>
+          <div id="viewerTitle" style="font-weight:900;font-size:20px"></div>
+          <div id="viewerDesc" style="color:var(--muted);margin-top:4px"></div>
+        </div>
+        <div class="badge" id="viewerCounter"></div>
+      </div>
+      <div class="tags" id="viewerTags" style="margin:12px 0 18px"></div>
+      <div class="panel">
+        <h3>Comments</h3>
+        <div id="commentsList" style="margin-bottom:12px"></div>
+        <form id="commentForm" name="photo-comments" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="photo-comments">
+          <input type="hidden" name="photoId" value="">
+          <div class="row">
+            <input name="name" placeholder="Name (optional)">
+            <input name="email" placeholder="Email (optional)">
+          </div>
+          <textarea name="message" placeholder="Write a comment..." required></textarea>
+          <button class="btn" type="submit">Post comment</button>
+          <p style="color:var(--muted);font-size:12px;margin-top:6px">Saved to Netlify Forms. A sample serverless function is included for listing comments.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+<footer class="footer">
+  <div class="container">
+    © <span id="y"></span> AIV3D · Built for Netlify · <a href="https://decapcms.org/" target="_blank" rel="noopener">Decap CMS</a>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+
+  <script src="js/comments.js"></script>
+  <script src="js/viewer.js"></script>
+</body>
+</html>

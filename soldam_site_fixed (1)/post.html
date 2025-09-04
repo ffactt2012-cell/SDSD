@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Post</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+  
+<header>
+  <nav class="nav">
+    <div class="brand"><span class="dot"></span> SOLDAM Design Lab</div>
+    <div class="navlinks">
+      <a href="index.html">Gallery</a>
+      <a href="board.html">Board</a>
+      <a href="/admin" title="Admin only">Admin</a>
+    </div>
+  </nav>
+</header>
+
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px">
+      <h1 id="postTitle" style="margin:0">Post</h1>
+      <div id="postDate" class="date"></div>
+    </div>
+    <article id="postContent" class="post" style="margin-top:12px"></article>
+    <div style="margin-top:14px">
+      <strong>Attachments</strong>
+      <ul id="postAttachments"></ul>
+    </div>
+    <p style="margin-top:20px;"><a class="btn" href="board.html">← Back to board</a></p>
+  </div>
+  
+<footer class="footer">
+  <div class="container">
+    © <span id="y"></span> AIV3D · Built for Netlify · <a href="https://decapcms.org/" target="_blank" rel="noopener">Decap CMS</a>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+
+  <script src="js/miniMarkdown.js"></script>
+  <script src="js/board.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "posts": [
+    {
+      "id": "welcome",
+      "title": "Welcome to the Board",
+      "date": "2025-09-04T00:00:00.000Z",
+      "content": "# Hello!\\n\\nThis board is for **documents / images / notes**. Log in at **/admin** to publish a new post and add attachments.",
+      "attachments": []
+    }
+  ]
+}
