@@ -1,13 +1,42 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Soldam Site with CMS</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Portfolio Gallery</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
-  <h1>Welcome to Soldam</h1>
-  <a href="/admin">Go to Admin Panel</a>
+  
+<header>
+  <nav class="nav">
+    <div class="brand"><span class="dot"></span> SOLDAM Design Lab</div>
+    <div class="navlinks">
+      <a href="index.html">Gallery</a>
+      <a href="board.html">Board</a>
+      <a href="/admin" title="Admin only">Admin</a>
+    </div>
+  </nav>
+</header>
+
+  <div class="container">
+    <div class="hero">
+      <div class="kicker">Showcase</div>
+      <div class="title">Elegant, fast, and admin‑editable portfolio.</div>
+      <div class="desc">Only the admin can upload, edit, and delete via <strong>/admin</strong>. Visitors can comment on each photo. Swipe on mobile, or use arrows on desktop. A simple board is included for documents and notes.</div>
+    </div>
+    <div id="galleryGrid" class="grid"></div>
+  </div>
+  
+<footer class="footer">
+  <div class="container">
+    © <span id="y"></span> AIV3D · Built for Netlify · <a href="https://decapcms.org/" target="_blank" rel="noopener">Decap CMS</a>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+
+  <script src="js/app.js"></script>
 </body>
 </html>
